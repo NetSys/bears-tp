@@ -5,7 +5,7 @@ import time
 
 import Checksum
 
-class Connection():
+class Connection(object):
     def __init__(self,host,port,start_seq,debug=False):
         self.debug = debug
         self.updated = time.time()
@@ -42,7 +42,7 @@ class Connection():
     def end(self):
         self.outfile.close()
 
-class Receiver():
+class Receiver(object):
     def __init__(self,listenport=33122,debug=False,timeout=10):
         self.debug = debug
         self.timeout = timeout
